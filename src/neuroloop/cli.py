@@ -39,7 +39,7 @@ from neuroloop.orchestrator import StepExecutionRecord, verify_public_observatio
 from neuroloop.randomness import CanonicalScenarioKey
 from neuroloop.storage import RunStore
 from neuroloop.viewer import generate_experiment_report
-from neuroloop.viewer.dashboard import generate_interactive_dashboard
+from neuroloop.gui import build_user_friendly_gui_html, run_gui_server
 
 
 def execute_protocol_tournament(
@@ -251,8 +251,15 @@ def cmd_sensitivity(args: argparse.Namespace) -> int:
 
 
 def cmd_dashboard(args: argparse.Namespace) -> int:
-    out_path = generate_interactive_dashboard(args.workspace, args.output)
+    out_path = Path(args.output)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(build_user_friendly_gui_html(args.workspace), encoding="utf-8")
     print(f"DASHBOARD GENERATED -> {out_path}")
+    return 0
+
+
+def cmd_gui(args: argparse.Namespace) -> int:
+    run_gui_server(workspace_root=args.workspace, port=args.port, open_browser=not args.no_browser)
     return 0
 
 
@@ -295,6 +302,12 @@ def build_parser() -> argparse.ArgumentParser:
     p_dash.add_argument("--workspace", default=".", help="Workspace root directory")
     p_dash.add_argument("--output", default="reports/dashboard.html", help="Output HTML file path")
     p_dash.set_defaults(func=cmd_dashboard)
+
+    p_gui = sub.add_parser("gui", help="Launch the user-friendly interactive NeuroLoop Studio GUI")
+    p_gui.add_argument("--workspace", default=".", help="Workspace root directory")
+    p_gui.add_argument("--port", type=int, default=8765, help="Local HTTP server port")
+    p_gui.add_argument("--no-browser", action="store_true", help="Do not auto-open browser")
+    p_gui.set_defaults(func=cmd_gui)
 
     return p
 

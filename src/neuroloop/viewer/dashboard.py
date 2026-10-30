@@ -61,23 +61,36 @@ def _load_protocol_bundle(run_dir: Path, report_dir: Path, label: str) -> dict[s
         traces[k].sort(key=lambda r: r["step_k"])
 
     # Sample counterfactual records for episode_index == 0
-    cf_samples = [
-        {
-            "phenotype": c["phenotype"],
-            "controller_name": c["controller_name"],
-            "step_k": int(c["step_k"]),
-            "horizon_h": int(c["horizon_h"]),
-            "actual_branch_loss": round(float(c["actual_branch_loss"]), 3),
-            "best_comparator_name": c["best_comparator_name"],
-            "best_comparator_loss": round(float(c["best_comparator_loss"]), 3),
-            "restricted_counterfactual_excess": round(float(c["restricted_counterfactual_excess"]), 3),
-            "comparator_losses": {
-                k: round(float(v), 3) for k, v in c.get("comparator_losses", {}).items()
-            },
-        }
-        for c in counterfactuals
-        if c.get("episode_index") == 0 and c.get("controller_name") in key_controllers
-    ]
+    cf_samples = []
+    for c in counterfactuals:
+        ctrl_name = c.get("candidate_controller") or c.get("controller_name")
+        if c.get("episode_index") == 0 and ctrl_name in key_controllers:
+            comp_losses = c.get("comparator_mean_losses") or c.get("comparator_losses") or {}
+            best_comp = c.get("selected_best_comparator") or c.get("best_comparator_name", "")
+            best_loss = comp_losses.get(best_comp, min(comp_losses.values()) if comp_losses else 0.0)
+            cf_samples.append(
+                {
+                    "phenotype": c["phenotype"],
+                    "controller_name": ctrl_name,
+                    "step_k": int(c.get("checkpoint_step_k", c.get("step_k", 0))),
+                    "horizon_h": int(c.get("horizon_steps", c.get("horizon_h", 0))),
+                    "actual_branch_loss": round(
+                        float(c.get("candidate_mean_loss", c.get("actual_branch_loss", 0.0))), 3
+                    ),
+                    "best_comparator_name": best_comp,
+                    "best_comparator_loss": round(float(best_loss), 3),
+                    "restricted_counterfactual_excess": round(
+                        float(
+                            c.get(
+                                "restricted_comparator_excess_loss",
+                                c.get("restricted_counterfactual_excess", 0.0),
+                            )
+                        ),
+                        3,
+                    ),
+                    "comparator_losses": {k: round(float(v), 3) for k, v in comp_losses.items()},
+                }
+            )
 
     return {
         "label": label,
