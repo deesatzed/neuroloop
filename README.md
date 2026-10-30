@@ -64,8 +64,9 @@ All commands run inside `/Users/o2satz/Downloads/NeuroLoop/.venv` with zero exte
 # 4. Run 2x2x2 factorial sensitivity matrix & report-lag sweep
 .venv/bin/neuroloop sensitivity --protocol protocols/development.yaml --output reports --episodes 10
 
-# 5. Generate standalone interactive HTML/SVG dashboard
+# 5. Generate standalone interactive HTML/SVG dashboard or launch live GUI Studio
 .venv/bin/neuroloop dashboard --workspace . --output reports/dashboard.html
+.venv/bin/neuroloop gui --port 8765
 ```
 
 ---
