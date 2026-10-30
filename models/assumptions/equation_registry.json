@@ -1,0 +1,44 @@
+{
+  "registry_version": "0.4.0",
+  "claim_tier": "SIMULATION_ONLY",
+  "disclaimer": "All equations and parameters in this registry represent synthetic computational models for closed-loop control research. None are clinically validated for human neuromodulation or medical device dosing.",
+  "models": {
+    "engine_b_phenomenological": {
+      "role": "Fast state-space phenomenological challenge engine (Engine B)",
+      "equations": {
+        "exponential_carryover_update": "x(t + dt) = exp(-dt / tau) * x(t) + (1 - exp(-dt / tau)) * x_target(u_delivered)",
+        "habituation_dynamics": "dh/dt = (h_inf(u_delivered, f_burst) - h) / tau_hab",
+        "delayed_sensitization": "ds/dt = (s_inf(u_delivered) - s) / tau_sens",
+        "latent_pain_surrogate": "pain(t) = clip(baseline_drive(t) - analgesic_trace(t) + delayed_sensitization(t), 0.0, 10.0)"
+      },
+      "units": {
+        "dt": "seconds",
+        "tau_analgesia": "seconds (default 70.0)",
+        "tau_habituation": "seconds (default 180.0)",
+        "tau_sensitization": "seconds (default 240.0)",
+        "u_delivered": "dimensionless [0.0, 1.0]",
+        "pain": "synthetic VAS units [0.0, 10.0]"
+      },
+      "provenance": "Synthetic phenomenological state-space abstraction designed to test history-dependent carryover, habituation, and delayed sensitization under partial observability."
+    },
+    "engine_a_mechanistic": {
+      "role": "Biophysical dorsal horn conductance & chloride homeostasis reference engine (Engine A)",
+      "equations": {
+        "ghk_gaba_reversal_mv": "E_GABA = (R*T/F) * ln((P_Cl * [Cl]_o + P_HCO3 * [HCO3]_o) / (P_Cl * [Cl]_i + P_HCO3 * [HCO3]_i))",
+        "kcc2_electroneutral_flux_mm_per_s": "J_KCC2 = k_KCC2 * ([K]_i * [Cl]_i - [K]_o * [Cl]_o) / ([K]_o * [Cl]_o)",
+        "chloride_dynamics_mm_per_s": "d[Cl]_i/dt = (-I_Cl_uA_cm2 / (F * depth_um)) - J_KCC2",
+        "wdr_membrane_potential": "C_m * dV/dt = -g_L*(V - E_L) - g_exc*(V - E_exc) - g_GABA*(V - E_GABA)"
+      },
+      "units": {
+        "Cl_i": "mM (valid domain [2.0, 60.0], rest ~6.5 mM in intact, ~16.0 mM in KCC2-impaired)",
+        "Cl_o": "mM (fixed 120.0 mM)",
+        "HCO3_i": "mM (fixed 15.0 mM)",
+        "HCO3_o": "mM (fixed 25.0 mM)",
+        "K_i": "mM (valid domain [90.0, 160.0], rest 135.0 mM)",
+        "K_o": "mM (valid domain [2.5, 12.0], rest 4.0 mM)",
+        "E_GABA": "mV (intact ~ -70 mV, depolarized shift ~ -48 mV)"
+      },
+      "provenance": "Simplified dorsal horn gate circuit inspired by Prescott, De Koninck & Sejnowski (2006) and Doyon et al. (2016) chloride homeostasis models. Electroneutral KCC2 flux is grounded in the net chemical potential product [K]_i[Cl]_i - [K]_o[Cl]_o."
+    }
+  }
+}

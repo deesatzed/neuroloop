@@ -1,0 +1,126 @@
+{
+  "config_sha256": "ff714d03ff80626000d63e02981b7b079203e2a5fbb8cb0136d6b4cb79d191de",
+  "equation_registry_sha256": "fb30308a09657c41919034b78e6c3caba9e4e25901329f389565c679990cdb71",
+  "git_commit": "no_git_repo",
+  "git_dirty_hash": "untracked",
+  "manifest_version": "0.4.0",
+  "platform_str": "macOS-27.2-arm64-arm-64bit-Mach-O",
+  "program_catalog": {
+    "P00_OFF": {
+      "normalized_intensity": 0.0,
+      "program_id": "P00_OFF",
+      "waveform": {
+        "biphasic_symmetric": true,
+        "burst_freq_hz": 0.0,
+        "pulse_freq_hz": 0.0,
+        "pulse_width_us": 0.0,
+        "pulses_per_burst": 0
+      }
+    },
+    "P01_LOW_CONV": {
+      "normalized_intensity": 0.35,
+      "program_id": "P01_LOW_CONV",
+      "waveform": {
+        "biphasic_symmetric": true,
+        "burst_freq_hz": 0.0,
+        "pulse_freq_hz": 80.0,
+        "pulse_width_us": 150.0,
+        "pulses_per_burst": 1
+      }
+    },
+    "P02_MOD_BURST": {
+      "normalized_intensity": 0.6,
+      "program_id": "P02_MOD_BURST",
+      "waveform": {
+        "biphasic_symmetric": true,
+        "burst_freq_hz": 2.0,
+        "pulse_freq_hz": 100.0,
+        "pulse_width_us": 200.0,
+        "pulses_per_burst": 5
+      }
+    },
+    "P03_HIGH_CONV": {
+      "normalized_intensity": 0.85,
+      "program_id": "P03_HIGH_CONV",
+      "waveform": {
+        "biphasic_symmetric": true,
+        "burst_freq_hz": 0.0,
+        "pulse_freq_hz": 100.0,
+        "pulse_width_us": 250.0,
+        "pulses_per_burst": 1
+      }
+    }
+  },
+  "python_version": "3.15.2",
+  "resolved_config": {
+    "actuator": {
+      "compliance_voltage_v": 28.0,
+      "max_current_ma": 20.0,
+      "nominal_impedance_ohm": 12500.0,
+      "toy_resistive_ohm": 1200.0
+    },
+    "actuator_mode": "normalized",
+    "claim_tier": "SIMULATION_ONLY",
+    "counterfactual": {
+      "audit_steps": [
+        8,
+        16,
+        24,
+        32
+      ],
+      "discount_gamma": 0.98,
+      "horizons_steps": [
+        4,
+        8
+      ],
+      "num_noise_replicates": 2
+    },
+    "engine_mode": "engine_b_phenomenological",
+    "evaluation": {
+      "cvar_alpha": 0.9,
+      "exploratory_relative_benefit_pct": 10.0,
+      "nonresponder_cvar_abs_margin": 8.0,
+      "worsening_cvar_abs_margin": 5.0
+    },
+    "freeze_status": "DEVELOPMENT",
+    "frequency_response_mode": "burst_slows_habituation",
+    "isolation_mode": "trusted_in_process",
+    "loss_weights": {
+      "w_fault_stimulation": 2.5,
+      "w_functional_impairment": 0.5,
+      "w_latent_pain": 1.0,
+      "w_proposal_violation": 5.0,
+      "w_query_burden_base": 0.45,
+      "w_stimulation_effort": 0.35,
+      "w_worsening_escalation": 3.0
+    },
+    "phenotypes": [
+      "responder",
+      "nonresponder",
+      "delayed_worsening"
+    ],
+    "protocol_id": "neuroloop_dev_v0_4",
+    "protocol_namespace": "dev_v0_4",
+    "protocol_version": "0.4.0",
+    "seeds": {
+      "episodes_per_phenotype": 20,
+      "master_seed": 20261029,
+      "scenario_offset": 1000
+    },
+    "supervisor": {
+      "latch_on_fault": true,
+      "max_intensity_under_fault": 0.0,
+      "max_safe_impedance_ohm": 35000.0
+    },
+    "timing": {
+      "calibration_steps": 6,
+      "episode_steps": 40,
+      "fast_tick_ms": 1000,
+      "macro_step_dt_sec": 30.0,
+      "rearm_required_clean_steps": 2,
+      "recovery_tail_steps": 4,
+      "report_delay_steps": 0
+    }
+  },
+  "rng_schema_version": "sha256_semantic_v1"
+}

@@ -1,0 +1,7 @@
+{
+  "counterfactuals_sha256": "e497dd9b3e49d0138c634032de41af7ae4e1af0e2dddd166f523b1a696d1e628",
+  "episodes_sha256": "0b7fded908e116e8e301d142996617d56c2381a97ad52173203e143bafa5abce",
+  "manifest_sha256": "8d05dfd4d6a56f4750ef922ae6ac70a4f337bbde060ae4cffcb372e87307bdb3",
+  "privileged_events_sha256": "c1c864ee70fecb2e4d7f6e8ff0d7a2034546e2084970e9f4f4106ec1bdac5b48",
+  "public_events_sha256": "a1eb4d09c22515fc96801d13cf748561ca3c727fab9e3fec60ace91e50ccaf3f"
+}

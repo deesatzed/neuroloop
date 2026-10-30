@@ -1,0 +1,419 @@
+{
+  "environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "PYTHONHASHSEED": "0"
+  },
+  "isolation_bypass": {
+    "leaked_phenotype": "delayed_worsening_chloride_shift"
+  },
+  "one_step_actuator_inconsistency": {
+    "nominal_current_ma": 7.0,
+    "observed_impedance_ohm": 12805.9,
+    "required_voltage_using_observed_ohms": 89.6413,
+    "output_voltage_v": 28.0,
+    "implied_current_ma_using_model_resistance": 2.1864921637682633,
+    "delivery_confirmed": false,
+    "analgesic_trace": 0.43715857582546763
+  },
+  "bayesian_belief_trace": [
+    {
+      "step": 0,
+      "proposed_program": "P02_MOD_BURST",
+      "mode": "SWITCH_PROGRAM",
+      "output_voltage_v": 28.0,
+      "impedance_ohm": 13237.7,
+      "saturated": true,
+      "delivery_confirmed": false,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.7507940503853922
+    },
+    {
+      "step": 1,
+      "proposed_program": "P00_OFF",
+      "mode": "ABSTAIN_SAFE",
+      "output_voltage_v": 0.0,
+      "impedance_ohm": 12954.5,
+      "saturated": false,
+      "delivery_confirmed": true,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.4880161327505049
+    },
+    {
+      "step": 2,
+      "proposed_program": "P02_MOD_BURST",
+      "mode": "SWITCH_PROGRAM",
+      "output_voltage_v": 28.0,
+      "impedance_ohm": 13291.7,
+      "saturated": true,
+      "delivery_confirmed": false,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 1.0654821292173098
+    },
+    {
+      "step": 3,
+      "proposed_program": "P00_OFF",
+      "mode": "ABSTAIN_SAFE",
+      "output_voltage_v": 0.0,
+      "impedance_ohm": 12470.9,
+      "saturated": false,
+      "delivery_confirmed": true,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.6925633839912514
+    },
+    {
+      "step": 4,
+      "proposed_program": "P02_MOD_BURST",
+      "mode": "SWITCH_PROGRAM",
+      "output_voltage_v": 28.0,
+      "impedance_ohm": 13053.1,
+      "saturated": true,
+      "delivery_confirmed": false,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 1.2012911974889449
+    },
+    {
+      "step": 5,
+      "proposed_program": "P00_OFF",
+      "mode": "ABSTAIN_SAFE",
+      "output_voltage_v": 0.0,
+      "impedance_ohm": 12864.0,
+      "saturated": false,
+      "delivery_confirmed": true,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.7808392783678142
+    },
+    {
+      "step": 6,
+      "proposed_program": "P01_LOW_CONV",
+      "mode": "SWITCH_PROGRAM",
+      "output_voltage_v": 28.0,
+      "impedance_ohm": 12835.3,
+      "saturated": true,
+      "delivery_confirmed": false,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.955586899739309
+    },
+    {
+      "step": 7,
+      "proposed_program": "P00_OFF",
+      "mode": "ABSTAIN_SAFE",
+      "output_voltage_v": 0.0,
+      "impedance_ohm": 13800.0,
+      "saturated": false,
+      "delivery_confirmed": true,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.6211314848305509
+    },
+    {
+      "step": 8,
+      "proposed_program": "P01_LOW_CONV",
+      "mode": "SWITCH_PROGRAM",
+      "output_voltage_v": 28.0,
+      "impedance_ohm": 12374.2,
+      "saturated": true,
+      "delivery_confirmed": false,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.8414738180279682
+    },
+    {
+      "step": 9,
+      "proposed_program": "P00_OFF",
+      "mode": "ABSTAIN_SAFE",
+      "output_voltage_v": 0.0,
+      "impedance_ohm": 13280.1,
+      "saturated": false,
+      "delivery_confirmed": true,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.5469579817181793
+    },
+    {
+      "step": 10,
+      "proposed_program": "P01_LOW_CONV",
+      "mode": "SWITCH_PROGRAM",
+      "output_voltage_v": 28.0,
+      "impedance_ohm": 13362.7,
+      "saturated": true,
+      "delivery_confirmed": false,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.7911383454574967
+    },
+    {
+      "step": 11,
+      "proposed_program": "P00_OFF",
+      "mode": "ABSTAIN_SAFE",
+      "output_voltage_v": 0.0,
+      "impedance_ohm": 11907.8,
+      "saturated": false,
+      "delivery_confirmed": true,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.5142399245473729
+    },
+    {
+      "step": 12,
+      "proposed_program": "P02_MOD_BURST",
+      "mode": "SWITCH_PROGRAM",
+      "output_voltage_v": 28.0,
+      "impedance_ohm": 13651.4,
+      "saturated": true,
+      "delivery_confirmed": false,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 1.0702760248455314
+    },
+    {
+      "step": 13,
+      "proposed_program": "P00_OFF",
+      "mode": "ABSTAIN_SAFE",
+      "output_voltage_v": 0.0,
+      "impedance_ohm": 12620.2,
+      "saturated": false,
+      "delivery_confirmed": true,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.6956794161495955
+    },
+    {
+      "step": 14,
+      "proposed_program": "P02_MOD_BURST",
+      "mode": "SWITCH_PROGRAM",
+      "output_voltage_v": 28.0,
+      "impedance_ohm": 13052.0,
+      "saturated": true,
+      "delivery_confirmed": false,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 1.2219646762322351
+    },
+    {
+      "step": 15,
+      "proposed_program": "P00_OFF",
+      "mode": "ABSTAIN_SAFE",
+      "output_voltage_v": 0.0,
+      "impedance_ohm": 13364.5,
+      "saturated": false,
+      "delivery_confirmed": true,
+      "active_stim_steps": 0,
+      "belief": [
+        0.5,
+        0.3,
+        0.2
+      ],
+      "analgesic_trace": 0.7942770395509529
+    }
+  ],
+  "bayesian_all_scenarios": [
+    {
+      "phenotype": "responder",
+      "attempted_active_steps": 340,
+      "confirmed_active_steps": 0,
+      "max_active_stim_counter": 0,
+      "unique_final_beliefs": [
+        [
+          0.5,
+          0.3,
+          0.2
+        ]
+      ]
+    },
+    {
+      "phenotype": "nonresponder",
+      "attempted_active_steps": 340,
+      "confirmed_active_steps": 0,
+      "max_active_stim_counter": 0,
+      "unique_final_beliefs": [
+        [
+          0.5,
+          0.3,
+          0.2
+        ]
+      ]
+    },
+    {
+      "phenotype": "delayed_worsening",
+      "attempted_active_steps": 340,
+      "confirmed_active_steps": 0,
+      "max_active_stim_counter": 0,
+      "unique_final_beliefs": [
+        [
+          0.5,
+          0.3,
+          0.2
+        ]
+      ]
+    }
+  ],
+  "zero_pain_handling": {
+    "rule_program": "P02_MOD_BURST",
+    "calibration_baseline": 6.0
+  },
+  "query_action": {
+    "delivered_program": "P00_OFF",
+    "feedback_requested": false
+  },
+  "uncalibrated_comparator_at_step8": {
+    "program": "P01_LOW_CONV",
+    "p01_measurement": null,
+    "p02_measurement": null
+  },
+  "cvar_21_values": {
+    "supplied": 19.0,
+    "exact_empirical": 19.42857142857143,
+    "empty_supplied": 0.0
+  },
+  "benchmark_aggregates": [
+    {
+      "phenotype": "responder",
+      "controller": "C2_CalibratedFixed",
+      "n": 20,
+      "mean_total_loss": 291.21249403904534,
+      "cvar90_total_loss": 363.33799239804637,
+      "mean_comparator_regret": 5.899602199263566,
+      "proposal_violations": 140
+    },
+    {
+      "phenotype": "responder",
+      "controller": "C3_SimpleRules",
+      "n": 20,
+      "mean_total_loss": 252.85450626514458,
+      "cvar90_total_loss": 254.79480619240977,
+      "mean_comparator_regret": 0.33684107027739374,
+      "proposal_violations": 0
+    },
+    {
+      "phenotype": "responder",
+      "controller": "C4_BayesianAdaptive",
+      "n": 20,
+      "mean_total_loss": 255.95729779357657,
+      "cvar90_total_loss": 259.5691763705572,
+      "mean_comparator_regret": 0.6608390268694881,
+      "proposal_violations": 0
+    },
+    {
+      "phenotype": "nonresponder",
+      "controller": "C2_CalibratedFixed",
+      "n": 20,
+      "mean_total_loss": 288.73966210630044,
+      "cvar90_total_loss": 395.66662590256885,
+      "mean_comparator_regret": 3.3811722513284423,
+      "proposal_violations": 80
+    },
+    {
+      "phenotype": "nonresponder",
+      "controller": "C3_SimpleRules",
+      "n": 20,
+      "mean_total_loss": 291.87906835630054,
+      "cvar90_total_loss": 296.3919053929435,
+      "mean_comparator_regret": 6.33387318771532,
+      "proposal_violations": 0
+    },
+    {
+      "phenotype": "nonresponder",
+      "controller": "C4_BayesianAdaptive",
+      "n": 20,
+      "mean_total_loss": 284.0797871063005,
+      "cvar90_total_loss": 287.66613377199656,
+      "mean_comparator_regret": 4.759192424295749,
+      "proposal_violations": 0
+    },
+    {
+      "phenotype": "delayed_worsening",
+      "controller": "C2_CalibratedFixed",
+      "n": 20,
+      "mean_total_loss": 294.09533165829396,
+      "cvar90_total_loss": 420.7404090574638,
+      "mean_comparator_regret": 3.701296983139179,
+      "proposal_violations": 80
+    },
+    {
+      "phenotype": "delayed_worsening",
+      "controller": "C3_SimpleRules",
+      "n": 20,
+      "mean_total_loss": 355.52687449822815,
+      "cvar90_total_loss": 378.2452105371651,
+      "mean_comparator_regret": 15.499239835178747,
+      "proposal_violations": 0
+    },
+    {
+      "phenotype": "delayed_worsening",
+      "controller": "C4_BayesianAdaptive",
+      "n": 20,
+      "mean_total_loss": 298.4162083000963,
+      "cvar90_total_loss": 303.7861443320507,
+      "mean_comparator_regret": 6.510900008653296,
+      "proposal_violations": 0
+    }
+  ]
+}

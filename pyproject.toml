@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuroloop"
+version = "0.4.0"
+description = "Reproducible closed-loop peripheral neuromodulation research instrument under partial observability"
+readme = "NeuroLoop_Revised_Build_Plan.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "NeuroLoop Lab Research"}]
+dependencies = []
+
+[project.scripts]
+neuroloop = "neuroloop.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"

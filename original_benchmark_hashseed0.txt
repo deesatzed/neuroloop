@@ -1,0 +1,11 @@
+Phenotype            | Controller             |  Mean Loss |    CVaR_90 | Regret R_H | Violations
+------------------------------------------------------------------------------------------------
+responder            | C2_CalibratedFixed     |     291.21 |     363.34 |       5.90 |        140
+responder            | C3_SimpleRules         |     252.85 |     254.79 |       0.34 |          0
+responder            | C4_BayesianAdaptive    |     255.96 |     259.57 |       0.66 |          0
+nonresponder         | C2_CalibratedFixed     |     288.74 |     395.67 |       3.38 |         80
+nonresponder         | C3_SimpleRules         |     291.88 |     296.39 |       6.33 |          0
+nonresponder         | C4_BayesianAdaptive    |     284.08 |     287.67 |       4.76 |          0
+delayed_worsening    | C2_CalibratedFixed     |     294.10 |     420.74 |       3.70 |         80
+delayed_worsening    | C3_SimpleRules         |     355.53 |     378.25 |      15.50 |          0
+delayed_worsening    | C4_BayesianAdaptive    |     298.42 |     303.79 |       6.51 |          0

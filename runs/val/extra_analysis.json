@@ -1,0 +1,54 @@
+{
+  "paired_comparisons": [
+    {
+      "ci95_high": 1.4496431610373866,
+      "ci95_low": -4.066973231741304,
+      "cvar_excess_loss": 0.8689339843245139,
+      "mean_excess_loss": -1.3086650353519587,
+      "n_paired": 20.0,
+      "phenotype": "responder",
+      "relative_reduction_pct": 0.4951047301390453,
+      "se_excess_loss": 1.4073001001986456
+    },
+    {
+      "ci95_high": -1.2895812339796742,
+      "ci95_low": -3.357644271065096,
+      "cvar_excess_loss": 2.552130636747848,
+      "mean_excess_loss": -2.323612752522385,
+      "n_paired": 20.0,
+      "phenotype": "nonresponder",
+      "relative_reduction_pct": 0.6795440749578804,
+      "se_excess_loss": 0.5275671012973014
+    },
+    {
+      "ci95_high": -11.718757508954024,
+      "ci95_low": -36.099631517563694,
+      "cvar_excess_loss": -4.04114104779373,
+      "mean_excess_loss": -23.90919451325886,
+      "n_paired": 20.0,
+      "phenotype": "delayed_worsening",
+      "relative_reduction_pct": 6.030007938290588,
+      "se_excess_loss": 6.21961071648206
+    },
+    {
+      "ci95_high": -1.7398602128759655,
+      "ci95_low": -3.4747254374048278,
+      "cvar_excess_loss": 0.28947372834292656,
+      "mean_excess_loss": -2.6072928251403966,
+      "n_paired": 20.0,
+      "phenotype": "null_effect",
+      "relative_reduction_pct": 0.7617319364023405,
+      "se_excess_loss": 0.44256765931858727
+    },
+    {
+      "ci95_high": 1.7248071603872572,
+      "ci95_low": -5.078713719234593,
+      "cvar_excess_loss": 0.8979705450161932,
+      "mean_excess_loss": -1.6769532794236681,
+      "n_paired": 20.0,
+      "phenotype": "random_fault_window",
+      "relative_reduction_pct": 0.6503340076369418,
+      "se_excess_loss": 1.7355920611280231
+    }
+  ]
+}

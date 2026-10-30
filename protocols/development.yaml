@@ -1,0 +1,62 @@
+{
+  "protocol_id": "neuroloop_dev_v0_4",
+  "protocol_version": "0.4.0",
+  "protocol_namespace": "dev_v0_4",
+  "freeze_status": "DEVELOPMENT",
+  "claim_tier": "SIMULATION_ONLY",
+  "engine_mode": "engine_b_phenomenological",
+  "actuator_mode": "normalized",
+  "isolation_mode": "trusted_in_process",
+  "frequency_response_mode": "burst_slows_habituation",
+  "timing": {
+    "macro_step_dt_sec": 30.0,
+    "fast_tick_ms": 1000,
+    "episode_steps": 40,
+    "calibration_steps": 6,
+    "report_delay_steps": 0,
+    "recovery_tail_steps": 4,
+    "rearm_required_clean_steps": 2
+  },
+  "seeds": {
+    "master_seed": 20261029,
+    "episodes_per_phenotype": 20,
+    "scenario_offset": 1000
+  },
+  "phenotypes": [
+    "responder",
+    "nonresponder",
+    "delayed_worsening"
+  ],
+  "counterfactual": {
+    "audit_steps": [8, 16, 24, 32],
+    "horizons_steps": [4, 8],
+    "num_noise_replicates": 2,
+    "discount_gamma": 0.98
+  },
+  "supervisor": {
+    "max_safe_impedance_ohm": 35000.0,
+    "max_intensity_under_fault": 0.0,
+    "latch_on_fault": true
+  },
+  "actuator": {
+    "max_current_ma": 20.0,
+    "compliance_voltage_v": 28.0,
+    "nominal_impedance_ohm": 12500.0,
+    "toy_resistive_ohm": 1200.0
+  },
+  "loss_weights": {
+    "w_latent_pain": 1.0,
+    "w_functional_impairment": 0.5,
+    "w_stimulation_effort": 0.35,
+    "w_query_burden_base": 0.45,
+    "w_proposal_violation": 5.0,
+    "w_fault_stimulation": 2.5,
+    "w_worsening_escalation": 3.0
+  },
+  "evaluation": {
+    "cvar_alpha": 0.90,
+    "exploratory_relative_benefit_pct": 10.0,
+    "nonresponder_cvar_abs_margin": 8.0,
+    "worsening_cvar_abs_margin": 5.0
+  }
+}

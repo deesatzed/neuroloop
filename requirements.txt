@@ -1,0 +1,33 @@
+annotated-types==0.8.0
+certifi==2026.10.23
+cffi==2.1.1
+contourpy==1.4.0
+cryptography==50.0.2
+cycler==0.12.1
+fonttools==4.66.1
+kiwisolver==1.5.1
+matplotlib==3.11.2
+mlx==0.32.4
+# Editable install with no version control (neuroloop==0.4.0)
+-e /Users/o2satz/Downloads/NeuroLoop
+numpy==2.5.4
+openvino==2026.4.1
+openvino-telemetry==2025.2.0
+packaging==26.3
+pillow==13.0.0
+pybind11==3.1.0
+pycairo==1.29.2
+pycparser==3.12
+pydantic==2.14.1
+pydantic_core==2.50.1
+PyGObject==3.58.1
+pyparsing==3.3.3
+python-dateutil==2.9.0.post0
+rpds-py==2026.9.1
+scipy==1.18.1
+sentencepiece==0.2.2
+setuptools==84.2.1
+six==1.17.0
+TBB==2023.2.0
+typing-inspection==0.4.4
+typing_extensions==4.16.0

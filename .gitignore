@@ -1,0 +1,23 @@
+# Python virtual environments & bytecode
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+src/*.egg-info/
+
+# macOS & IDE artifacts
+.DS_Store
+.vscode/
+.idea/
+
+# Large raw event logs & SQLite databases in runs/ (keep manifest.json & checksums.json)
+runs/*/*.sqlite
+runs/*/*.sqlite-shm
+runs/*/*.sqlite-wal
+runs/*/*.jsonl
+runs/*/episodes.json
+runs/*/counterfactuals.json
